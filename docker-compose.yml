@@ -1,0 +1,19 @@
+version: "3"
+
+services:
+
+  db:
+    image: postgres:10
+    container_name: portal
+    restart: always
+    ports:
+      - 5432:5432
+    environment:
+      POSTGRES_DB: postgresql
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: 123
+      POSTGRES_HOST: localhost
+    volumes:
+      - my_dbdata:/var/lib/postgresql/data
+volumes:
+  my_dbdata:
