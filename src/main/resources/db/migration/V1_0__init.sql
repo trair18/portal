@@ -3,6 +3,6 @@ CREATE TABLE users
     id       BIGSERIAL PRIMARY KEY,
     username VARCHAR(64) NOT NULL UNIQUE,
     password VARCHAR(64) NOT NULL,
-    email    VARCHAR(64) NOT NULL UNIQUE
-
+    email    VARCHAR(64) NOT NULL UNIQUE,
+    admin  BOOLEAN DEFAULT FALSE
 );
